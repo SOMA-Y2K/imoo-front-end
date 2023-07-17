@@ -130,7 +130,7 @@ class _StyleSelectState extends State<StyleSelect> {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => const FeedDetail(),
+                            builder: (context) => FeedDetail(),
                           ));
                     }
                   },

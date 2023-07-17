@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:imoo_v01/FeedPaged/FeedDetail.dart';
 import 'JoinPages/GenderSelect.dart';
 
 void main() {
@@ -11,12 +12,17 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Imoo',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
+    return GestureDetector(
+      onTap: () {
+        FeedDetail.textFocus.unfocus();
+      },
+      child: MaterialApp(
+        title: 'Imoo',
+        theme: ThemeData(
+          primarySwatch: Colors.blue,
+        ),
+        home: const MainPage(title: 'Imoo Main Page'),
       ),
-      home: const MainPage(title: 'Imoo Main Page'),
     );
   }
 }
